@@ -1,0 +1,22 @@
+.toolbar-row .btn {
+  background-color: #cccccc;
+}
+
+.toolbar-row .btn:hover {
+  background-color: #b3b3b3;
+}
+
+.toolbar-row .btn.active {
+  background-color: #737373;
+}
+
+canvas {
+  border: 1px solid #adb5bd;
+}
+
+.shape-item {
+  background-color: #f0f0f0;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

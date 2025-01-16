@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Drawing App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="1_1099_SIMIONESCU_CORINA_ANDREEA.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Toolbar -->
+      <div
+        class="row toolbar-row pt-3 pl-3 pr-3 mb-3"
+        style="background-color: #f0f0f0"
+      >
+        <!-- Shapes tools -->
+        <div class="col-auto">
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn"
+              data-shape="ellipse"
+              id="ellipseShape"
+            >
+              <i class="bi bi-circle"></i>
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-shape="rectangle"
+              id="rectangleShape"
+            >
+              <i class="bi bi-square"></i>
+            </button>
+            <button type="button" class="btn" data-shape="line" id="lineShape">
+              <i class="bi bi-dash-lg"></i>
+            </button>
+          </div>
+
+          <small class="d-block text-center">Shapes</small>
+        </div>
+
+        <!-- Size tools -->
+        <div class="col-auto">
+          <div class="btn-group">
+            <button type="button" class="btn" data-size="small" id="smallSize">
+              <i class="bi bi-circle-fill" style="font-size: 0.5rem"></i>
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-size="medium"
+              id="mediumSize"
+            >
+              <i class="bi bi-circle-fill" style="font-size: 0.75rem"></i>
+            </button>
+            <button type="button" class="btn" data-size="large" id="largeSize">
+              <i class="bi bi-circle-fill" style="font-size: 1rem"></i>
+            </button>
+          </div>
+
+          <small class="d-block text-center">Size</small>
+        </div>
+
+        <!-- Color palette -->
+        <div class="col-auto">
+          <div class="btn-group">
+            <button type="button" class="btn" data-color="black">
+              <i class="bi bi-circle-fill" style="color: black"></i>
+            </button>
+            <button type="button" class="btn" data-color="white">
+              <i class="bi bi-circle-fill" style="color: white"></i>
+            </button>
+            <button type="button" class="btn" data-color="red">
+              <i class="bi bi-circle-fill" style="color: red"></i>
+            </button>
+            <button type="button" class="btn" data-color="yellow">
+              <i class="bi bi-circle-fill" style="color: yellow"></i>
+            </button>
+            <button type="button" class="btn" data-color="green">
+              <i class="bi bi-circle-fill" style="color: green"></i>
+            </button>
+            <button type="button" class="btn" data-color="blue">
+              <i class="bi bi-circle-fill" style="color: blue"></i>
+            </button>
+            <button type="button" class="btn" data-color="magenta">
+              <i class="bi bi-circle-fill" style="color: magenta"></i>
+            </button>
+          </div>
+
+          <small class="d-block text-center">Colors</small>
+        </div>
+
+        <!-- Background colors -->
+        <div class="col-auto">
+          <div class="btn-group">
+            <button type="button" class="btn" data-background-color="black">
+              <i class="bi bi-circle-fill" style="color: black"></i>
+            </button>
+            <button type="button" class="btn" data-background-color="white">
+              <i class="bi bi-circle-fill" style="color: white"></i>
+            </button>
+            <button type="button" class="btn" data-background-color="red">
+              <i class="bi bi-circle-fill" style="color: red"></i>
+            </button>
+            <button type="button" class="btn" data-background-color="yellow">
+              <i class="bi bi-circle-fill" style="color: yellow"></i>
+            </button>
+            <button type="button" class="btn" data-background-color="green">
+              <i class="bi bi-circle-fill" style="color: green"></i>
+            </button>
+            <button type="button" class="btn" data-background-color="blue">
+              <i class="bi bi-circle-fill" style="color: blue"></i>
+            </button>
+            <button type="button" class="btn" data-background-color="magenta">
+              <i class="bi bi-circle-fill" style="color: magenta"></i>
+            </button>
+          </div>
+
+          <small class="d-block text-center">Background Colors</small>
+        </div>
+
+        <!-- Export buttons -->
+        <div class="col-auto ms-auto">
+          <div class="btn-group">
+            <button type="button" class="btn" data-export="png">PNG</button>
+            <button type="button" class="btn" data-export="svg">SVG</button>
+          </div>
+          <small class="d-block text-center">Export</small>
+        </div>
+      </div>
+
+      <!-- Drawing area and shape list -->
+      <div class="row">
+        <!-- Canvas container -->
+        <div class="col">
+          <canvas id="drawingCanvas" width="1040" height="600"></canvas>
+        </div>
+
+        <!-- Shape list -->
+        <div class="col-3">
+          <div class="border border-dark-subtle p-2">
+            <h5 class="text-center border-bottom">Shape list</h5>
+            <div id="shapeList" class="overflow-auto" style="height: 550px">
+              <!-- Shapes added here dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="1_1099_SIMIONESCU_CORINA_ANDREEA.js"></script>
+  </body>
+</html>
